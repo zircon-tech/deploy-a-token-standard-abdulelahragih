@@ -1,4 +1,4 @@
-## Unit 3: Ethereum |Deploy a Token Standard -English Version- 🚀
+## Unit 3: Ethereum | Deploy a Token Standard -English Version- 🚀
 
 ### What's this project about?
 
