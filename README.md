@@ -32,7 +32,7 @@ despliega en una testnet realizando pruebas previamente en tu local environment.
 
 - Utiliza un entorno de desarrollo local para desplegar tu contrato. 
 - Sube a este repo la configuración del pryecto. 
-- Actualiza este REAME con una breve explicación del proyecto. 
+- Actualiza este README con una breve explicación del proyecto. 
 - Comenta tu código para que tus compañeros de Zircon puedan entenderlo.
 - Utiliza [OpenZeppelin](https://www.openzeppelin.com/) 
 
