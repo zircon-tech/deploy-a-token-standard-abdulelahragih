@@ -2,44 +2,51 @@
 
 ### What's this project about?
 
-Deploy your own token by selecting between the ERC20, ERC721, ERC777 standards from the OpenZeppelin library,
-deploy on a testnet by performing tests beforehand in your local environment.
+This project demonstrates how to deploy your own ERC20 token using the OpenZeppelin library. The token is deployed on the Sepolia testnet, and you can interact with it using scripts and MetaMask. The project is designed for learning and experimentation with Ethereum token standards.
 
-#### Requirements 
+---
 
-- Use any Ethereum Local development environment to deploy your contract. 
-- Upload to this repo the configuration of your local environment. 
-- Update this README with a brief explanation of the project.   
-- Comment your code so your teammates at Zircon can understand it. 
-- Use [OpenZeppelin](https://www.openzeppelin.com/) 
+### Why ERC20?
 
-### List of resources
+As a newbie in the world of blockchain, I choose ERC20 because it's the most basic and widely used token standard on Ethereum. It's a good starting point to understand how tokens work on Ethereum.
 
-#### General
+### Deployment Details
 
-- Token [ERC20](https://docs.openzeppelin.com/contracts/4.x/erc20)
-- Token [ERC721](https://docs.openzeppelin.com/contracts/4.x/erc721)
-- Token [ERC777](https://docs.openzeppelin.com/contracts/4.x/erc777)
+- **Token Name:** AbToken
+- **Symbol:** ABT
+- **Decimals:** 18
+- **Initial Supply:** 1,000,000 ABT
+- **Deployed to Sepolia:** [View on Etherscan](https://sepolia.etherscan.io/token/0xAc77184d1Ee3b4D22f4BcF4490856905c397D1F8)
+- **Contract Address:** `0xAc77184d1Ee3b4D22f4BcF4490856905c397D1F8`
 
-## Unidad 3: Ethereum | Desplegar un Token estandar -Versión en español- 🚀
+---
 
-### ¿De qué se trata este proyecto?
+### Getting Started
 
-Despliega tu propio token seleccionando entre los estandares ERC20, ERC721, ERC777 de la librería OpenZeppelin,
-despliega en una testnet realizando pruebas previamente en tu local environment.
+#### 1. Install Dependencies
+```bash
+npm install
+```
 
-#### Requisitos
+#### 2. Compile Contracts
+```bash
+npx hardhat compile
+```
 
-- Utiliza un entorno de desarrollo local para desplegar tu contrato. 
-- Sube a este repo la configuración del pryecto. 
-- Actualiza este README con una breve explicación del proyecto. 
-- Comenta tu código para que tus compañeros de Zircon puedan entenderlo.
-- Utiliza [OpenZeppelin](https://www.openzeppelin.com/) 
+#### 3. Deploy to Sepolia (using Hardhat Ignition)
+- Configure your `.env` file with your Sepolia RPC URL and private key:
+  ```env
+  SEPOLIA_RPC_URL=YOUR_SEPOLIA_RPC_URL
+  PRIVATE_KEY=YOUR_PRIVATE_KEY
+  ```
+- Deploy:
+  ```bash
+  npx hardhat ignition deploy ./ignition/modules/AbToken.ts --network sepolia
+  ```
 
-### Lista de recursos
-
-#### General
-
-- Token [ERC20](https://docs.openzeppelin.com/contracts/4.x/erc20)
-- Token [ERC721](https://docs.openzeppelin.com/contracts/4.x/erc721)
-- Token [ERC777](https://docs.openzeppelin.com/contracts/4.x/erc777)
+#### 4. Run the Token Transfer Script
+- Edit `scripts/transfer-abtoken.ts` and set the recipient address.
+- Run:
+  ```bash
+  npx hardhat run scripts/transfer-abtoken.ts --network sepolia
+  ```
